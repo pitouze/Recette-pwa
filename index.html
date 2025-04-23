@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mes Recettes & Température</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Mes Recettes</h1>
+  </header>
+  <main>
+    <section id="recipes"></section>
+    <section id="temperature">
+      <h2>Température de cuisson</h2>
+      <div id="temp-display">– °C</div>
+      <button id="read-temp">Lire la température</button>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
+</body>
+</html>
